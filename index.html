@@ -631,6 +631,35 @@
     </div>
     <!--Fin de accordion-->
     <br>
+
+    <!--Inicio Contacto Envio Correo Electrónico-->
+    <div class="container">
+        <div class="row">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">CONTACTO</h2>
+            <form id="form">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label" required>Nombre</label>
+                    <input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre completo">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea type="text" name="Mensaje" class="form-control" id="Mensaje" rows="3"
+                        placeholder="Mensaje"></textarea>
+                </div>
+
+                <input type="submit" id="button" value="Enviar" class="btn btn-primary">
+            </form>
+
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+                emailjs.init('ET3jIOYmwXKeM4dbC')
+            </script>
+        </div>
+    </div>
+    <!--Fin de Contacto Envio Correo Electrónico-->
+
     <!--Inicio de toasts-->
     <div class="container">
         <center>
@@ -664,8 +693,6 @@
     </div>
     <br>
     <!--FIn de toasts-->
-
-
 </body>
 
 <!--JavaScript del toasts-->
@@ -680,19 +707,47 @@
         })
     }
 </script>
+<!--JavaScript del toasts-->
 
+<!--Alerta al ingresar a la pagina-->
 <script>
     window.alert("¡Bienvenido a mi hoja de vida!");
-
+    /*
     var confirmacion = window.confirm("¿Deseas continuar?");
     if (confirmacion == true) {
         window.alert("Ok, puedes visualizar la información.");
     } else {
         window.alert("¡Gracias por tener la iniciativa, para la próxima!");
     }
+    */
 </script>
+<!--Alerta al ingresar a la pagina-->
 
-<!--JavaScript del toasts-->
+<!--Inicio de JavaScript Contacto-->
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviado...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_8me7w1h';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('Enviado!');
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
+<!--Inicio de JavaScript Contacto-->
+
 
 <!-- Modal 1-->
 <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -1,12 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/web_page_one.png" type="image/x-icon">
+    <title>Hoja de Vida</title>
+
+    <!--Conexión de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Fin de conexión-->
 </head>
-<body>
-  <h1>!MI PRIMER HOSTING CONFIGURADO¡</h1>
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        background: transparent;
+        width: 100%;
+        height: 42px;
+        position: fixed;
+        z-index: 100;
+        overflow: visible;
+    }
+
+    nav ul li:hover {
+        background: #7a7a7a46;
+    }
+
+    
+</style>
+
+<body style="background-color: rgba(224, 224, 224, 0.63);" >
+    <!--Inicio del navar-->
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 245, 105, 0.781);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="image/Foto Sebas.jpg" alt="Logo" width="80px"
+                        height="80px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#perfil">Perfil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#educacion">Educación</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiencia_laboral">Experiencia Laboral</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#concursos">Concursos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#conocimientos_informaticos">Conocimientos Informaticos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#habilidades">Habilidades</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#experiencias" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Referencias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#experiencias_personales">Personales</a></li>
+                                <li><a class="dropdown-item" href="#experiencias_familiares">Familiares</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" onkeyup="search_item()" placeholder="Buscar"
+                            aria-label="Search" id="searchbar">
+                        <button class="btn btn-dark" type="submit">Buscar</button>
+                        <!--<button class="btn btn-outline-dark" type="submit" >Buscar</button>-->
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Fin del navar-->
+
+    <br><br><br><br><br><br>
+    <!--Inicio de card-->
+    <div class="container">
+        <div class="row">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">PERFIL</h2>
+            <br>
+            <div class="card mb-3">
+                <div class="row g-0" id="perfil">
+                    <div class="col-md-4">
+                        <center>
+                            <img src="image/profile.png" class="img-fluid rounded-start" alt="Perfil" width="150px"
+                                height="150px">
+                        </center>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text" style="text-align: justify">Soy una persona responsable, honesta,
+                                comprometida y dedicada a mis
+                                labores, con buenas actitudes para el trabajo en equipo y con facilidad para
+                                relacionarme en grupo, aprendo con rapidez y me intereso por cumplir de manera adecuada
+                                con las distintas actividades que realizo.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de card-->
+    <br>
+
+    <!--Inicio de card 5-->
+    <div class="container">
+        <div class="row" id="educacion">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">EDUCACIÓN
+            </h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Institución Edudactiva José Acevedo Y Gómez</h5>
+                            <p class="card-text">
+                                Educación Secundaria
+                                <br>
+                                2012 - 2017
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Politécnico Colombiano Jaime Isaza Cadavid</h5>
+                            <p class="card-text">
+                                Media Técnica - Desarrollo de Software
+                                <br>
+                                2016 - 2020
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Servicio Nacional de Aprendizaje - SENA CESGE</h5>
+                            <p class="card-text">
+                                Tecnología en Formulación de Proyectos
+                                <br>
+                                2018 - 2020
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CESDE</h5>
+                            <p class="card-text">
+                                Técnica en Asistente de Desarrollo de Software
+                                <br>
+                                En curso 2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de card-->
+    <br><br>
+
+    <!--Inico de card-->
+    <div class="container">
+        <div class="row" id="experiencia_laboral">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
+                EXPERIENCIA LABORAL</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/abogados.jpg" class="card-img-top" alt="Abogados" width="400px" height="250px">
+                        <div class="card-body">
+                            <h5 class="card-title">Oficinia de Abogados - Secretario Administrativo</h5>
+                            <p class="card-text">Abril 2019 - Octubre 2019</p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#Modal1">Más información
+                            </button>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/transportes_rapido_ochoa.png" class="card-img-top"
+                            alt="Transportes Rápido Ochoa" width="400px" height="250px">
+                        <div class="card-body">
+                            <h5 class="card-title">Transportes Rápido Ochoa S.A – Auxiliar Administrativo</h5>
+                            <p class="card-text">17 octubre 2019 – 10 julio 2020</p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#Modal2">Más información
+                            </button>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/tm_solutions.png" class="card-img-top" alt="TM Solutions" width="400px"
+                            height="250px">
+                        <div class="card-body">
+                            <h5 class="card-title">TM Solutions S.A.S – Auxiliar de Proyectos y Atención al Cliente
+                            </h5>
+                            <p class="card-text">21 octubre del 2020 – Actualmente.</p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#Modal3">Más información
+                            </button>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de card-->
+    <br><br>
+
+    <!--Inico de card-->
+    <div class="container">
+        <div class="row" id="concursos">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">CONCURSOS
+            </h2>
+            <div class="card mb-3" style="max-width: 1116px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <center>
+                            <img src="image/recolsi.jpg" class="img-fluid rounded-start" alt="Resolsi" width="200px"
+                                height="200px">
+                        </center>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: justify;">1. XVIII Encuentro Departamental de
+                                Semilleros de Investigación –
+                                Nodo
+                                Antioquia, Fundación RedColsi, SENNOVA</h5>
+                            <p class="card-text">
+                                Mayo 2019 – Medellín <br>
+                                Participación con el proyecto: Parking Here – Reserva de Estacionamiento.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Última actualización hace 3
+                                    minutos</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card mb-3" style="max-width: 1116px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <center>
+                            <img src="image/sena.png" class="img-fluid rounded-start" alt="Apihon SENA" width="200px"
+                                height="200px">
+                        </center>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">2. Apithon Bancolombia – Servicio Nacional del Aprendizaje SENA
+                            </h5>
+                            <p class="card-text">
+                                13 al 15 agosto 2019 – Medellín <br>
+                                Participación con el proyecto: Api Store - 3er puesto.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Última actualización hace 3
+                                    minutos</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de card-->
+    <br>
+
+    <!--Inicio accordion-->
+    <div class="container">
+        <div class="row" id="conocimientos_informaticos">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
+                CONOCIMIENTOS
+                INFORMATICOS</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <img src="image/office.png" alt="ofiice" width="20px" height="20px">
+                            Herramientas de Ofimática
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            • Word <br>
+                            • Excel <br>
+                            • Power Point
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <img src="image/microsoft_project.png" alt="project" width="20px" height="20px">
+                            Microsoft Project
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Software de administración de proyectos, desarrollado por Microsoft
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            <img src="image/tm_land.png" alt="land" width="20px" height="20px">
+                            TM Land
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="text-align: justify;">
+                            Aplicación web TMS que permite un control integral de la flota en empresas de transporte
+                            de
+                            carga y pasajeros, integrando la información operativa con el Ministerio de Transporte.
+                            Ponemos a disposición de nuestros clientes el conocimiento de la industria aeronáutica
+                            para
+                            optimizar recursos en el sector de transporte terrestre.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            <img src="image/slack.png" alt="slack" width="20px" height="20px">
+                            Slack
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="text-align: justify;">
+                            Programa de mensajería instantánea diseñado por Slack Technologies y propiedad de
+                            Salesforce.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            <img src="image/google_chat.png" alt="google" width="20px" height="20px">
+                            Google Chat
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="text-align: justify;">
+                            Software de comunicación desarrollado por Google creado para equipos que proporciona
+                            mensajes directos y salas de chat de equipo, junto con una función de mensajería grupal
+                            que
+                            permite compartir contenido de Google Drive.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            <img src="image/jira.png" alt="jira" width="20px" height="20px">
+                            Jira
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="text-align: justify;">
+                            Software propietario para la gestión de proyectos, seguimiento de errores e incidencias.
+                            La
+                            herramienta fue desarrollada por la empresa australiana Atlassian.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Fin de accordion-->
+    <br><br>
+
+
+    <!--Inicio de list group-->
+    <div class="container">
+        <div class="row" id="habilidades">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
+                HABILIDADES
+            </h2>
+            <ul class="list-group">
+                <li class="list-group-item"><img src="image/trabajo_en_equipo.png" alt="jira" width="20px"
+                        height="20px">Capacidad de trabajo en equipo</li>
+                <li class="list-group-item"><img src="image/motivacion.png" alt="jira" width="20px"
+                        height="20px">Moviticación y confianza</li>
+                <li class="list-group-item"><img src="image/flexibilidad.png" alt="jira" width="20px"
+                        height="20px">Flexibilidad y adaptación al cambio</li>
+                <li class="list-group-item"><img src="image/proactividad.png" alt="jira" width="20px"
+                        height="20px">Proactividad</li>
+                <li class="list-group-item"><img src="image/comunicacion.png" alt="jira" width="20px"
+                        height="20px">Comunicación asertiva</li>
+                <li class="list-group-item"><img src="image/control.png" alt="jira" width="20px" height="20px">Control
+                    de procedimientos</li>
+                <li class="list-group-item"><img src="image/creactividad.png" alt="jira" width="20px"
+                        height="20px">Creactividad e innovación</li>
+                <li class="list-group-item"><img src="image/resposabilidad.png" alt="jira" width="20px"
+                        height="20px">Responsabilidad</li>
+                <li class="list-group-item"><img src="image/gestion.png" alt="jira" width="20px"
+                        height="20px">Formulación, gestión y evaluación de proyectos</li>
+            </ul>
+        </div>
+    </div>
+    <!--Fin de list group-->
+    <br><br>
+
+    <!--Inico de accordion-->
+    <div class="container">
+        <div class="row" id="experiencias_personales">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
+                REFERENCIAS
+            </h2>
+            <h3><img src="image/information.png" alt="" width="50px" height="50px">Personales</h3>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Jaime Alonso Vélez Garcés
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Ocupación:</strong> Independiente. <br>
+                            <strong>Celular:</strong> +(57) 312 786 5328.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Manuela Vargas Madrid
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Ocupación:</strong> Empleada. <br>
+                            <strong>Celular:</strong> +(57) 313 632 1055.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Ana Cristina Chavarria Arenas
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Ocupación:</strong> Empleada. <br>
+                            <strong>Celular:</strong> +(57) 320 830 4833.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de accordion-->
+    <br>
+
+    <!--Inico de accordion-->
+    <div class="container">
+        <div class="row" id="experiencias_familiares">
+            <h3><img src="image/information family.png" alt="" width="50px" height="50px">Familiares</h3>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                            Diego Alexander David Jaramillo
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Ocupación:</strong> Empleado. <br>
+                            <strong>Empresa:</strong> Virtual Llantas. <br>
+                            <strong>Celular:</strong> +(57) 312 744 6857.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            Jorge Andrés Correa Jaramillo
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Ocupación:</strong> Docente. <br>
+                            <strong>Celular:</strong> +(57) 312 714 9335.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Beatriz Elena Patiño
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Ocupación:</strong> Taquillera. <br>
+                            <strong>Empresa:</strong> Cotrayal. <br>
+                            <strong>Celular:</strong> +(57) 312 883 4780.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de accordion-->
+    <br>
+
+    <!--Inicio Contacto Envio Correo Electrónico-->
+    <div class="container">
+        <div class="row" id="contacto">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">CONTACTO
+            </h2>
+            <form id="form">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"><b>Nombre</b></label>
+                    <input type="text" required="required" name="Nombre" class="form-control" id="Nombre"
+                        placeholder="Nombre completo">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"><b>Mensaje</b></label>
+                    <textarea type="text" required="required" name="Mensaje" class="form-control" id="Mensaje" rows="3"
+                        placeholder="Mensaje"></textarea>
+                </div>
+
+                <input type="submit" id="button" value="Enviar" class="btn btn-primary">
+            </form>
+
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+                emailjs.init('ET3jIOYmwXKeM4dbC')
+            </script>
+        </div>
+    </div>
+    <!--Fin de Contacto Envio Correo Electrónico-->
+    <br>
+    <!--Inicio de toasts-->
+    <div class="container">
+        <center>
+            <div class="row" style="max-width: 500px;">
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Más información</button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <img src="image/contacto.png" class="rounded me-2" alt="..." width="20px" height="20px">
+                            <strong class="me-auto" s>CONTACTO</strong>
+                            <small>Hace 11 minutos</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body" style="text-align: justify;">
+                            <b>Teléfono Celular:</b> +(57) 304 452 5209 <br>
+                            <b>Teléfono Fijo:</b> (604) 297 62 47 <br>
+                            <b>Correo Electrónico:</b> <br>
+                            <a
+                                href="mailto:sebastian.villada.jaramillo@gmail.com">sebastian.villada.jaramillo@gmail.com</a>
+                            <br>
+                            <b>Ubicación</b> <br>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.367628143758!2d-75.57487638573389!3d6.346418226958526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442fb35e0dcd77%3A0xc69aef0c90b9a459!2sCl.%2059d%20%2368c-10%2C%20Valadares%2C%20Bello%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1677703080626!5m2!1ses!2sco"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+    <br>
+    <!--FIn de toasts-->
 </body>
+
+<!--JavaScript del toasts-->
+<script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+        toastTrigger.addEventListener('click', () => {
+            const toast = new bootstrap.Toast(toastLiveExample)
+
+            toast.show()
+        })
+    }
+</script>
+<!--JavaScript del toasts-->
+
+<!--Alerta al ingresar a la pagina-->
+<script>
+  //  window.alert("¡Bienvenido a mi hoja de vida!");
+    /*
+    var confirmacion = window.confirm("¿Deseas continuar?");
+    if (confirmacion == true) {
+        window.alert("Ok, puedes visualizar la información.");
+    } else {
+        window.alert("¡Gracias por tener la iniciativa, para la próxima!");
+    }
+    */
+</script>
+<!--Alerta al ingresar a la pagina-->
+
+<!--Inicio de JavaScript Contacto-->
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviado...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_8me7w1h';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Información enviada';
+                    alert('Enviado!');
+                    form.reset();
+                })
+        });
+</script>
+<!--Inicio de JavaScript Contacto-->
+
+<!-- Buscador
+<script>
+    function search_item(){
+        let input = document.getElementById("searchbar").value
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName("items");
+
+        for(i = 0; i < x.length; i ++){
+            if (!x[i].innerHTML.toLowerCase().includes(input)){
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="list-item"
+            }
+        }
+    }
+</script>
+-->
+
+<!-- Modal 1-->
+<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:rgb(55, 55, 250);">Secretario
+                    Administrativo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                • Servicio al cliente. <br>
+                • Administrar tramitación de expedientes. <br>
+                • Tener conocimiento sobre herramientas de ofimática. <br>
+                • Mantener al día el cronograma y agenda. <br>
+                • Analizar información rendida por los demandantes. <br>
+                • Recibir y archivar documentos. <br>
+                • Realizar informes, estadísticas e indicadores.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2-->
+<div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 700px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:rgb(55, 55, 250);">Auxiliar
+                    Administrativo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                • Realizar distintos informes y estadísticas para dar respuesta a clientes de la compañía. <br>
+                • Cumplimiento de manifiestos al Ministerio de Transporte. <br>
+                • Reporte de Facturas Electrónicas. <br>
+                • Análisis de indicadores de los costos de operación de la unidad de carga. <br>
+                • Indicadores de novedades en la prestación del servicio. <br>
+                • Seguimiento de guías de transporte que presentan novedades. <br>
+                • Realización de estudios para la iniciación de nuevos procesos y tomas de decisiones.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3-->
+<div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1300px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:rgb(55, 55, 250);">Auxiliar de
+                    Proyectos y Atención al Cliente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <b>Gestión de clientes</b> <br>
+                • Contestar llamadas, atender clientes, registrar en el sistema de requerimientos.<br><br>
+
+                <b>Implementar clientes nuevos</b> <br>
+                • Brindar acompañamiento en el proceso. <br>
+                • Gestionar necesidades puntuales del cliente. <br><br>
+
+                <b>Capacitaciones en TM Land para clientes interno y externos</b> <br>
+                • Programación y ejecución de capacitaciones para los clientes y el personal de la organización.
+                <br><br>
+
+                <b>Control de proyectos</b> <br>
+                • Llevar el cronograma de cada proyecto de la organización, tener presente fechas de entrega y
+                revisar
+                periódicamente el porcentaje de los avances mediante indicadores. <br><br>
+
+                <b>Soporte a personal administrativo</b> <br>
+                • Dar soporte a los requerimientos del personal administrativo. <br><br>
+
+                <b>Mantenimiento comercial del cliente dentro y fuera de la ciudad</b> <br>
+                • Capacitando al cliente en aplicaciones de la organización. <br>
+                • Seguimiento y/o acompañamiento. <br><br>
+
+                <b>Apoyo en campañas de marketing</b> <br>
+                • Brindando información y asesoría al cliente. <br><br>
+
+                <b>Prestar soporte técnico</b> <br>
+                • Dar soporte y soluciones a los usuarios de TM Tracker. <br>
+                • Dar soporte de TM Land (Módulo Maestros, Carga Nacional, Carga Urbana, Intermunicipal, Costos,
+                Mantenimiento, etc.). <br>
+                • Colocar ticket si los inconvenientes de los clientes/usuarios en el uso de las plataformas, darle
+                solución y una respuesta pronta y adecuada, a su inconveniente en el uso de ellas. <br> <br>
+
+                <b>Cursos Certificados</b> <br>
+                • Scrum Master – Udemy. <br>
+                • Kick Off Modelos Asociativos Digitales 4.0 – Universidad Sergio Arboleda. <br>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Conexión de Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<!--Fin de conexión-->
+
 </html>

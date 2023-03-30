@@ -16,138 +16,116 @@
 </head>
 
 
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
 
-<body style="background-color: rgba(224, 224, 224, 0.63);">
+    header {
+        background: transparent;
+        width: 100%;
+        height: 42px;
+        position: fixed;
+        z-index: 100;
+        overflow: visible;
+    }
+
+    nav ul li:hover {
+        background: #7a7a7a46;
+    }
+
+    
+</style>
+
+<body style="background-color: rgba(224, 224, 224, 0.63);" >
 
     <!--Inicio del navar-->
-    <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 245, 105, 0.781);">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="image/Foto Sebas.jpg" alt="Logo" width="80px" height="80px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 245, 105, 0.781);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="image/Foto Sebas.jpg" alt="Logo" width="80px"
+                        height="80px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Perfil</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#perfil">Perfil</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Educación</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#educacion">Educación</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Experiencia Laboral</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiencia_laboral">Experiencia Laboral</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Concursos</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#concursos">Concursos</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Conocimientos Informaticos</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#conocimientos_informaticos">Conocimientos Informaticos</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Habilidades</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#habilidades">Habilidades</a>
+                        </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Referencias
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Personales</a></li>
-                            <li><a class="dropdown-item" href="#">Familiares</a></li>
-                        </ul>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#experiencias" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Referencias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#experiencias_personales">Personales</a></li>
+                                <li><a class="dropdown-item" href="#experiencias_familiares">Familiares</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
 
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-dark" type="submit">Buscar</button>
-                    <!--<button class="btn btn-outline-dark" type="submit" >Buscar</button>-->
-                </form>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" onkeyup="search_item()" placeholder="Buscar"
+                            aria-label="Search" id="searchbar">
+                        <button class="btn btn-dark" type="submit">Buscar</button>
+                        <!--<button class="btn btn-outline-dark" type="submit" >Buscar</button>-->
+                    </form>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <!--Fin del navar-->
 
-
-    <!--Inicio del carousel
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="image/ideaperfil.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: black">Trabajo en equipo</h5>
-                    <p style="color: black;">Soy una persona que tengo la capaicidad para trabajar en equipo.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="image/responsable.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: whitesmoke">Responsabilidad</h5>
-                    <p style="color: whitesmoke;">Me considero una persona muy responsable, me gusta entregar las cosas
-                        a tiempo.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="image/innovacion.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: whitesmoke;">Creactividad e Innovacion</h5>
-                    <p style="color: whitesmoke;">Me gusta ser creativo e innovador.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    Fin del corousel-->
-    <br><br>
-
+    <br><br><br><br><br><br>
     <!--Inicio de card-->
     <div class="container">
         <div class="row">
-            <div class="card mb-3" style="max-width: 1116px;">
-                <div class="row g-0">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">PERFIL</h2>
+            <br>
+            <div class="card mb-3">
+                <div class="row g-0" id="perfil">
                     <div class="col-md-4">
                         <center>
-                            <img src="image/profile.png" class="img-fluid rounded-start" alt="Perfil" width="200px"
-                                height="200px">
+                            <img src="image/profile.png" class="img-fluid rounded-start" alt="Perfil" width="150px"
+                                height="150px">
                         </center>
                     </div>
 
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">PERFIL</h5>
                             <p class="card-text" style="text-align: justify">Soy una persona responsable, honesta,
                                 comprometida y dedicada a mis
                                 labores, con buenas actitudes para el trabajo en equipo y con facilidad para
@@ -167,8 +145,9 @@
 
     <!--Inicio de card 5-->
     <div class="container">
-        <div class="row">
-            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">EDUCACIÓN</h2>
+        <div class="row" id="educacion">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">EDUCACIÓN
+            </h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
                     <div class="card">
@@ -229,10 +208,9 @@
 
     <!--Inico de card-->
     <div class="container">
-        <div class="row">
+        <div class="row" id="experiencia_laboral">
             <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
-                EXPERIENCIA
-                LABORAL</h2>
+                EXPERIENCIA LABORAL</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100">
@@ -298,7 +276,7 @@
 
     <!--Inico de card-->
     <div class="container">
-        <div class="row">
+        <div class="row" id="concursos">
             <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">CONCURSOS
             </h2>
             <div class="card mb-3" style="max-width: 1116px;">
@@ -359,7 +337,7 @@
 
     <!--Inicio accordion-->
     <div class="container">
-        <div class="row">
+        <div class="row" id="conocimientos_informaticos">
             <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
                 CONOCIMIENTOS
                 INFORMATICOS</h2>
@@ -484,8 +462,9 @@
 
     <!--Inicio de list group-->
     <div class="container">
-        <div class="row">
-            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">HABILIDADES
+        <div class="row" id="habilidades">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
+                HABILIDADES
             </h2>
             <ul class="list-group">
                 <li class="list-group-item"><img src="image/trabajo_en_equipo.png" alt="jira" width="20px"
@@ -514,8 +493,9 @@
 
     <!--Inico de accordion-->
     <div class="container">
-        <div class="row">
-            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">REFERENCIAS
+        <div class="row" id="experiencias_personales">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">
+                REFERENCIAS
             </h2>
             <h3><img src="image/information.png" alt="" width="50px" height="50px">Personales</h3>
             <div class="accordion" id="accordionExample">
@@ -574,7 +554,7 @@
 
     <!--Inico de accordion-->
     <div class="container">
-        <div class="row">
+        <div class="row" id="experiencias_familiares">
             <h3><img src="image/information family.png" alt="" width="50px" height="50px">Familiares</h3>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
@@ -634,8 +614,9 @@
 
     <!--Inicio Contacto Envio Correo Electrónico-->
     <div class="container">
-        <div class="row">
-            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">CONTACTO</h2>
+        <div class="row" id="contacto">
+            <h2 class="fw-semibold" style="text-align: center ;font-size: 30px; color: rgb(55, 55, 250);">CONTACTO
+            </h2>
             <form id="form">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label"><b>Nombre</b></label>
@@ -712,7 +693,7 @@
 
 <!--Alerta al ingresar a la pagina-->
 <script>
-    window.alert("¡Bienvenido a mi hoja de vida!");
+  //  window.alert("¡Bienvenido a mi hoja de vida!");
     /*
     var confirmacion = window.confirm("¿Deseas continuar?");
     if (confirmacion == true) {
@@ -747,6 +728,24 @@
 </script>
 <!--Inicio de JavaScript Contacto-->
 
+<!-- Buscador
+<script>
+    function search_item(){
+        let input = document.getElementById("searchbar").value
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName("items");
+
+        for(i = 0; i < x.length; i ++){
+            if (!x[i].innerHTML.toLowerCase().includes(input)){
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="list-item"
+            }
+        }
+    }
+</script>
+-->
 
 <!-- Modal 1-->
 <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -825,7 +824,8 @@
                 <br><br>
 
                 <b>Control de proyectos</b> <br>
-                • Llevar el cronograma de cada proyecto de la organización, tener presente fechas de entrega y revisar
+                • Llevar el cronograma de cada proyecto de la organización, tener presente fechas de entrega y
+                revisar
                 periódicamente el porcentaje de los avances mediante indicadores. <br><br>
 
                 <b>Soporte a personal administrativo</b> <br>
@@ -853,7 +853,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
             </div>
-            
+
         </div>
     </div>
 </div>
